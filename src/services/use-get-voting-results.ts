@@ -13,7 +13,7 @@ export const useGetVotingResults = () => {
             fudd: 0,
             bugs: 0
         };
-        const {data} = await axios.get(`${SERVER_URL}:${SERVER_PORT}/votes`);
+        const {data} = await axios.get(`${SERVER_URL}:${SERVER_PORT}/api/results`);
         data.forEach((vote: {id: number, choice: string}) => {
             if (vote.choice === "Elmer J. Fudd") {
                 results.fudd++;
